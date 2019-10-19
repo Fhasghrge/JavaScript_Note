@@ -11,8 +11,8 @@
     -   nodeValue
     -   parentNode
     -   childNodes
-        -   保存了 NodeList 对象--一种类数组对象，可以通过方括号访问元素，是动态的，但是不同于 Array 对象
-        -   可以通过数组的 Array.prototype.slice.call(nodes,0)对 IE 之外的浏览器的 childNodes 进行转换，对于 IE 只能用 Array.push,两种方式的选择使用 try-catch 实现
+        -   保存了 NodeList 对象==> 一种类数组对象，可以通过方括号访问元素，是动态的，但是不同于 Array 对象
+        -   可以通过数组的 Array.prototype.slice.call(nodes,0)对 IE 之外的浏览器的 childNodes 进行转换，对于 IE 只能用 Array.push,两种方式的选择使用 try-catch 兼容实现
         -   length
         -   item()
     -   previousSibling
@@ -38,7 +38,7 @@
 
 ## Document
 
--   通过 Document 类型创建文档，浏览器中 document 时 HTMLDocument(继承自 Document）的实例
+-   通过 Document 类型创建文档，浏览器中 `document` 是 `HTMLDocument`(继承自 Document）的实例
 -   nodeType = 9
 -   nodeName = #document
 
@@ -46,13 +46,13 @@
 
 ###### document
 
--   HTMLDocument 的实例
+-   是 HTMLDocument 的实例
 -   字节点
     -   documentElement
         -   指向`<html>`
     -   body
     -   doctype
-        -   指向<!DOCTYPE>
+        -   指向`<!DOCTYPE>`
         -   兼容性：IE8 之前都当作注释，IE9+，Firefox 当作节点，opera，safari，chrome 会解析但是不会当作节点
 -   文档信息
     -   title
@@ -117,7 +117,7 @@
     -   getNamedItem( )
     -   removeNamedItem( )
     -   setNamedItem( )
-    -   specified( )
+    -   specified
         -   true:属性被修改过，不是默认值
 -   创建元素
     -   createElement( )
