@@ -27,7 +27,7 @@
         -   如果传入的节点已经是文档的一部分了，那么就从原来的位置转移到新的位置
     -   insertBefore
     -   replaceChild
-        -   被替换的节点还在文档中，但是没有它的位置了（疑问：垃圾回收在哪里？）
+        -   被替换的节点还在文档中，但是没有它的位置了
     -   removeChild
     -   cloneNode
         -   参数：true --深复制，复制节点以及整个子节点树
@@ -105,7 +105,7 @@
     -   setAttribute( )
     -   removeAttribute( )
     -   style
-        -   getAttribute 获得是 css 文本，通过'.style'获得是对象
+        -   getAttribute 获得是 css 文本，通过`.style`获得是对象
     -   onclick（等事件处理程序）
         -   通过 getAttribute 获得的是字符串，通过'.onclick'获得是函数
 -   设置属性
@@ -142,40 +142,40 @@
 
 ## Comment
 
-    - createComment()
+- createComment()
 
 ## CDATASection
 
-    - XML中使用，这里忽略
+- XML中使用，这里忽略
 
 ## DocumentType
 
-    - nodeType = 10
-    - nodeName = doctype
-    - 大部分关于兼容性的在上文介绍过
+- nodeType = 10
+- nodeName = doctype
+- 大部分关于兼容性的在上文介绍过
 
 ## DocumentFragment
 
-    - nodeType = 11
-    - nodeName = #document-doctype
-    - 轻量级文档，当作仓库存放节点以便一次性添加节点，防止反复渲染造成的问题(例如表格）
-    - appendChild()
-    - insertBefore
+- nodeType = 11
+- nodeName = #document-doctype
+- 轻量级文档，当作仓库存放节点以便一次性添加节点，防止反复渲染造成的问题(例如表格）
+- appendChild()
+- insertBefore
 
 ## Attr
 
-    - nodeType = 2
-    - nodeName = 属性名称
-    - nodeValue = 属性的值
-    - name
-    - value
-    - specified
-    - createAttribute
-        - 参数： 属性名称
-        - 返回的是节点
-    - setAttribute
-        - 把属性添加到节点
-        - 参数：属性节点
+- nodeType = 2
+- nodeName = 属性名称
+- nodeValue = 属性的值
+- name
+- value
+- specified
+- createAttribute
+    - 参数： 属性名称
+    - 返回的是节点
+- setAttribute
+    - 把属性添加到节点
+    - 参数：属性节点
 
 ## 动态脚本
 
