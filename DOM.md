@@ -1,9 +1,7 @@
-#DOM（第十章）
+# DOM（第十章）
 
 ## Node 类型
 
--   除了 IE 之外的浏览器都可以访问这个节点类型
--   Node 类型中定义的属性常量用来分辨节点类型（但是 IE 不支持 Node 类型，就没有这些常量可以拿来对比）
 -   所有节点都继承于 Node 类型
 -   节点关系
     -   nodeType
@@ -38,13 +36,10 @@
 
 ## Document
 
--   通过 Document 类型创建文档，浏览器中 `document` 是 `HTMLDocument`(继承自 Document）的实例
 -   nodeType = 9
 -   nodeName = #document
 
-##### HTMLDocument
-
-###### document
+### document
 
 -   是 HTMLDocument 的实例
 -   字节点
@@ -53,7 +48,6 @@
     -   body
     -   doctype
         -   指向`<!DOCTYPE>`
-        -   兼容性：IE8 之前都当作注释，IE9+，Firefox 当作节点，opera，safari，chrome 会解析但是不会当作节点
 -   文档信息
     -   title
     -   URL
@@ -68,17 +62,7 @@
         -   没有区分大小写（虽然标准上让区分）
     -   getElementsByName( )
         -   常用于单选按钮的发送
--   特殊集合
-    -   anchors
-        -   带有 name 的`<a>`元素
-    -   form
-    -   images
-    -   links
-        -   带有 href 的`<a>`元素
--   一致性检测
-    -   implementation
-        -   hasFeature( )
-            -   参数：要检测的 DOM 功能名称，版本号
+        
 -   文档写入
     -   write()
     -   writeIn()
@@ -140,42 +124,21 @@
 -   subStringData(offset, data)
 -   creatDataNode()
 
-## Comment
-
-- createComment()
-
-## CDATASection
-
-- XML中使用，这里忽略
-
-## DocumentType
-
-- nodeType = 10
-- nodeName = doctype
-- 大部分关于兼容性的在上文介绍过
-
-## DocumentFragment
-
-- nodeType = 11
-- nodeName = #document-doctype
-- 轻量级文档，当作仓库存放节点以便一次性添加节点，防止反复渲染造成的问题(例如表格）
-- appendChild()
-- insertBefore
 
 ## Attr
 
-- nodeType = 2
-- nodeName = 属性名称
-- nodeValue = 属性的值
-- name
-- value
-- specified
-- createAttribute
-    - 参数： 属性名称
-    - 返回的是节点
-- setAttribute
-    - 把属性添加到节点
-    - 参数：属性节点
+-   nodeType = 2
+-   nodeName = 属性名称
+-   nodeValue = 属性的值
+-   name
+-   value
+-   specified
+-   createAttribute
+    -   参数： 属性名称
+    -   返回的是节点
+-   setAttribute
+    -   把属性添加到节点
+    -   参数：属性节点
 
 ## 动态脚本
 
