@@ -9,8 +9,7 @@
     -   nodeValue
     -   parentNode
     -   childNodes
-        -   保存了 NodeList 对象==> 一种类数组对象，可以通过方括号访问元素，是动态的，但是不同于 Array 对象
-        -   可以通过数组的 Array.prototype.slice.call(nodes,0)对 IE 之外的浏览器的 childNodes 进行转换，对于 IE 只能用 Array.push,两种方式的选择使用 try-catch 兼容实现
+        -   可以通过数组的 Array.prototype.slice.call(nodes,0)对childNodes 进行转换，对于 IE 只能用 Array.push,两种方式的选择使用 try-catch 兼容实现
         -   length
         -   item()
     -   previousSibling
